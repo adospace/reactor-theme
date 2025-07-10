@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorTheme.DemoApp", "ReactorTheme.DemoApp\ReactorTheme.DemoApp.csproj", "{8539B752-B622-4D39-A29E-A27293620624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactorTheme", "ReactorTheme\ReactorTheme.csproj", "{01AED299-05C5-4C95-8194-2D3DCED382DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8539B752-B622-4D39-A29E-A27293620624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8539B752-B622-4D39-A29E-A27293620624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8539B752-B622-4D39-A29E-A27293620624}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8539B752-B622-4D39-A29E-A27293620624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8539B752-B622-4D39-A29E-A27293620624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AED299-05C5-4C95-8194-2D3DCED382DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AED299-05C5-4C95-8194-2D3DCED382DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AED299-05C5-4C95-8194-2D3DCED382DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AED299-05C5-4C95-8194-2D3DCED382DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90933836-C0FF-4867-BF25-D9BF90A8F004}
+	EndGlobalSection
+EndGlobal
