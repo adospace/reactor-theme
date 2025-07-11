@@ -58,7 +58,7 @@ public class ApplicationTheme : Theme
     public readonly static string Primary = nameof(Primary);
     public readonly static string Secondary = nameof(Secondary);
     public readonly static string Terciary = nameof(Terciary);
-    
+
 
     public readonly static string H1 = nameof(H1);
     public readonly static string H2 = nameof(H2);
@@ -196,6 +196,14 @@ public class ApplicationTheme : Theme
             .CornerRadius(12)
             .Padding(16, 12.5)
             .Height(40);
+
+
+        EntryStyles.Default = _ => _
+            .FontFamily("InterRegular")
+            .TextColor(NeutralDarkDarkest)
+            .BackgroundColor(NeutralLightLightest)
+            .FontSize(SizeBodyM)
+            ;
 
         ContentPageStyles.Default = _ => _
             .BackgroundColor(NeutralLightLightest);

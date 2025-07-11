@@ -25,6 +25,10 @@ partial class ShellPage : Component<ShellPageState>
             FlyoutItem("Radio Button", new RadioButtonsPage()
                 .OnOpenSideMenu(OpenFlyout)),
             FlyoutItem("Toggle", new ToggleButtonsPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Text Field", new TextFieldsPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Text Area", new TextAreasPage()
                 .OnOpenSideMenu(OpenFlyout))
         )
         .FlyoutIsPresented(State.IsFlyoutPresented)
