@@ -29,6 +29,12 @@ partial class ShellPage : Component<ShellPageState>
             FlyoutItem("Text Field", new TextFieldsPage()
                 .OnOpenSideMenu(OpenFlyout)),
             FlyoutItem("Text Area", new TextAreasPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Number Input", new NumberInputPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Slider", new SliderPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Star Rating", new StarRatingPage()
                 .OnOpenSideMenu(OpenFlyout))
         )
         .FlyoutIsPresented(State.IsFlyoutPresented)

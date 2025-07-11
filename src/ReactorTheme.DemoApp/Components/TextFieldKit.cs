@@ -32,6 +32,8 @@ partial class TextFieldKit : Component
 
     [Prop]
     Action<string>? _onTextChanged;
+    [Prop]
+    string? _hintText;
 
     public override VisualNode Render()
     {
@@ -56,7 +58,13 @@ partial class TextFieldKit : Component
             .StrokeCornerRadius(12)
             .StrokeThickness(1.5)
             .Padding(16,2)
-            .Height(48)
+            .Height(48),
+
+            _hintText == null ? null :
+            Label()
+                .ThemeKey(ApplicationTheme.BodyXS)
+                .TextColor(ApplicationTheme.NeutralDarkLightest)
+                .Text(_hintText ?? string.Empty)
         );
     }
 

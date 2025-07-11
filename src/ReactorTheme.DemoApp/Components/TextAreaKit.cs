@@ -33,6 +33,12 @@ partial class TextAreaKit : Component
     [Prop]
     Action<string>? _onTextChanged;
 
+    [Prop]
+    EditorAutoSizeOption _autosize = EditorAutoSizeOption.TextChanges;
+
+    [Prop]
+    string? _hintText;
+
     public override VisualNode Render()
     {
         return VStack(spacing: 8,
@@ -43,6 +49,7 @@ partial class TextAreaKit : Component
             Border(
                 Editor()
                     .ThemeKey(ThemeKey)
+                    .AutoSize(_autosize)
                     .Placeholder(_placeholder ?? string.Empty)
                     .IsReadOnly(_readOnly)
                     .Text(_text ?? string.Empty)
@@ -54,7 +61,13 @@ partial class TextAreaKit : Component
             .Stroke(_inError ? ApplicationTheme.SupportErrorMedium : ApplicationTheme.NeutralLightDarkest)
             .StrokeCornerRadius(12)
             .StrokeThickness(1.5)
-            .Padding(16,2)
+            .Padding(16,2),
+
+            _hintText == null ? null : 
+            Label()
+                .ThemeKey(ApplicationTheme.BodyXS)
+                .TextColor(ApplicationTheme.NeutralDarkLightest)
+                .Text(_hintText ?? string.Empty)
         );
     }
 
