@@ -23,6 +23,15 @@ partial class TextAreasPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new TextAreaKit()
+            .Title("Label")
+            .Placeholder("Placeholder")
+            .Text("Text Field")
+            .OnTextChanged(text => ...)
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return VScrollView(

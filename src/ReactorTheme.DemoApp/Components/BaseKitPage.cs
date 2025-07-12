@@ -16,6 +16,8 @@ abstract partial class BaseKitPage : BasePage
 
     protected abstract string PropertiesImageSource { get; }
 
+    protected virtual string? Code { get; }
+
     protected override VisualNode RenderBody()
     {
         return VScrollView(
@@ -26,7 +28,7 @@ abstract partial class BaseKitPage : BasePage
                     .ThemeKey(ApplicationTheme.BodyS)
                     .TextColor(ApplicationTheme.NeutralDarkLight),
 
-                RenderSectionTitle(2, "VARIANTS"),
+                RenderSectionTitle(2, "LAB"),
 
                 string.IsNullOrWhiteSpace(Variants) ? null : 
                 Label(Variants)
@@ -39,7 +41,15 @@ abstract partial class BaseKitPage : BasePage
 
                 Image(PropertiesImageSource)
                     .MaximumWidthRequest(300)
-                    .Aspect(Aspect.AspectFit)
+                    .Aspect(Aspect.AspectFit),
+
+                Code == null ? null :
+                RenderSectionTitle(4, "CODE"),
+
+                Code == null  ? null :
+                Label(Code)
+                    .ThemeKey(DemoAppApplicationTheme.Code)
+
             )
         )
         .Padding(45, 70)

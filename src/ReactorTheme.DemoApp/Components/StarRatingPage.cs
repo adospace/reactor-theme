@@ -22,6 +22,15 @@ partial class StarRatingPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new StarRatingKit()
+            .Title("Star Rating")
+            .Value(state.Value)
+            .OnValueChanged(value => ...)
+            .MaxValue(5)
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return VScrollView(

@@ -22,6 +22,21 @@ partial class TabsPage : BaseKitPage
 
     protected override string Group => "CONTROL";
 
+    protected override string? Code => """
+        new TabKit()
+            .SelectedItemKey(selectedItemKey.Value)
+            .OnSelectedItem(key => ...)
+            .Items(
+            [
+                new TabItem("Tab1", "Title"),
+                new TabItem("Tab2", "Title"),
+                new TabItem("Tab3", "Title"),
+                new TabItem("Tab4", "Title"),
+                new TabItem("Tab5", "Title")
+            ])
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return VStack(

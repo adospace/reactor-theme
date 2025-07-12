@@ -23,6 +23,13 @@ partial class CheckboxesPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new CheckBoxKit()
+            .Size(CheckBoxSize.Normal)
+            .Checked(state.Value)
+            .OnChecked(checkedValue => ...))
+        """;
+
     protected override VisualNode RenderVariants()
     {
         return VStack(spacing: 24,

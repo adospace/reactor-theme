@@ -19,6 +19,15 @@ partial class NumberInputPage : BaseKitPage
     protected override string Title => "Number Input";
 
     protected override string Group => "INPUT";
+   
+    protected override string? Code => """
+        new NumberInputKit()
+            .Title("Number Input")
+            .Value(State.Value)
+            .OnValueChanged(value => ...)
+            .MinValue(0)
+            .MaxValue(10)
+        """;
 
     protected override VisualNode RenderVariants()
     {

@@ -35,6 +35,10 @@ partial class ShellPage : Component<ShellPageState>
             FlyoutItem("Slider", new SliderPage()
                 .OnOpenSideMenu(OpenFlyout)),
             FlyoutItem("Star Rating", new StarRatingPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Accordition", new AccorditionPage()
+                .OnOpenSideMenu(OpenFlyout)),
+            FlyoutItem("Calendar", new CalendarPage()
                 .OnOpenSideMenu(OpenFlyout))
         )
         .FlyoutIsPresented(State.IsFlyoutPresented)

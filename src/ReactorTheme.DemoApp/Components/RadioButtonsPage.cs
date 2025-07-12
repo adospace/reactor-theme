@@ -22,6 +22,14 @@ partial class RadioButtonsPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new RadioButtonKit()
+            .Size(RadioButtonSize.Normal)
+            .Checked(state.Value)
+            .OnChecked(checkedValue => ...)
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return VStack(spacing: 24,

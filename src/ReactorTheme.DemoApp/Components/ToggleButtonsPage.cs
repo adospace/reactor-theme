@@ -22,6 +22,13 @@ partial class ToggleButtonsPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new ToggleButtonKit()
+            .Checked(state.Value)
+            .OnChecked(v => ...))
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return VStack(

@@ -22,6 +22,16 @@ partial class SliderPage : BaseKitPage
 
     protected override string Group => "INPUT";
 
+    protected override string? Code => """
+        new SliderKit()
+            .Title("Title")
+            .Value(state.Value)
+            .OnValueChanged(value => ...)
+            .MinValue(0)
+            .MaxValue(100)
+            .Step(1)
+        """;
+
     protected override VisualNode RenderVariants()
     {
         return VScrollView(

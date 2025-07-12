@@ -26,6 +26,15 @@ partial class ButtonsPage : BaseKitPage
 
     protected override string PropertiesImageSource => "props_buttons.png";
 
+    protected override string? Code => """
+        new ButtonKit()
+            .ThemeKey(ApplicationTheme.Primary)
+            .Text("Button")
+            .LeftImageSource("image_left.png")
+            .RightImageSource("image_right.png")
+        """;
+
+
     protected override VisualNode RenderVariants()
     {
         return Grid("Auto,Auto,Auto,Auto,Auto,Auto", "Auto,*",

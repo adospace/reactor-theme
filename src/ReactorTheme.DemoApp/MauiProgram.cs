@@ -24,6 +24,10 @@ namespace ReactorTheme.DemoApp
                 })
                 .UseReactorThemeFonts()
                 .UseMauiCommunityToolkit()
+                .ConfigureFonts(fonts =>
+                {
+                    fonts.AddFont("CascadiaCode-Regular.ttf", "CascadiaCodeRegular");
+                })
                 ;
 
 

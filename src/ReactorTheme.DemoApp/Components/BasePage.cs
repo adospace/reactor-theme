@@ -16,13 +16,6 @@ abstract partial class BasePage : Component
 
     protected abstract string Group { get; }
 
-    //protected abstract string HowToUse { get; }
-
-    //protected abstract string Variants { get; }
-
-    //protected abstract string PropertiesImageSource { get; }
-
-
     [Prop]
     Action? _onOpenSideMenu;
 
@@ -32,32 +25,7 @@ abstract partial class BasePage : Component
             Grid("127,*","*",
                 RenderTitle(),
 
-
                 RenderBody()
-
-                //VScrollView(
-                //    VStack(spacing: 20,
-                //        RenderSectionTitle(1, "HOW TO USE"),
-
-                //        Label(HowToUse)
-                //            .ThemeKey(ApplicationTheme.BodyS)
-                //            .TextColor(ApplicationTheme.NeutralDarkLight),
-                        
-                //        RenderSectionTitle(2, "VARIANTS"),
-                                                
-                //        Label(Variants)
-                //            .ThemeKey(ApplicationTheme.BodyS)
-                //            .TextColor(ApplicationTheme.NeutralDarkLight),
-
-                //        RenderBody(),
-
-                //        RenderSectionTitle(3, "PROPERTIES"),
-
-                //        Image(PropertiesImageSource)
-                //    )
-                //)
-                //.Padding(45,70)
-                //.GridRow(1)
             )
         )
         .Set(MauiControls.Shell.NavBarIsVisibleProperty, false)

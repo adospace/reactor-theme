@@ -22,6 +22,18 @@ partial class ContentSwitchersPage : BaseKitPage
 
     protected override string Group => "CONTROL";
 
+    protected override string? Code => """
+        new ContentSwitcherKit()
+            .SelectedItemKey(selectedItemKey.Value)
+            .OnSelectedItem(key => ...)
+            .Items(
+            [
+                new ContentSwitcherItem("Section1", "Section 1"),
+                new ContentSwitcherItem("Section2", "Section 2"),
+                new ContentSwitcherItem("Section3", "Section 3")
+            ])
+        """;
+
     protected override VisualNode RenderVariants()
     {
         return VStack(

@@ -15,9 +15,17 @@ public partial class IconTintColorBehavior { }
 
 class DemoAppApplicationTheme : ApplicationTheme
 {
+    public readonly static string Code = nameof(Code);
+
     protected override void OnApply()
     {
         base.OnApply();
+
+        LabelStyles.Themes[Code] = _ => _
+            .FontFamily("CascadiaCodeRegular")
+            .TextColor(NeutralDarkDark)
+            .BackgroundColor(NeutralLightLight)
+            .FontSize(12);
 
         ContentPageStyles.Default = _ => _
             .Title("MauiReactor Theme Demo App")
