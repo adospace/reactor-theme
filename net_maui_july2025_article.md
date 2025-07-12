@@ -16,7 +16,36 @@ The theme follows the excellent Figma design [Mobile Apps – Prototyping Kit](h
 
 # Getting Started
 
+1) [Set up MauiReactor if you haven't already](https://adospace.gitbook.io/mauireactor/getting-started-1)
 
+2) Install the ReactorTheme package
+
+3) Replace the initial ApplicationTheme under Resources/Styles with an empty class deriving from ReactorTheme ApplicationTheme
+
+```csharp
+class MyAppApplicationTheme : ApplicationTheme
+{
+    protected override void OnApply()
+    {
+      //additional styles
+    }
+}
+```
+
+5) Add ReactorTheme directives to the MauiAppBuilder
+
+```csharp
+builder
+    .UseMauiReactorApp<ShellPage>(app =>
+    {
+        app.UseTheme<MyAppApplicationTheme>();//<-- use your application theme class deriving from the ReactorTheme application theme
+    },
+    unhandledExceptionAction: e =>
+    {
+        System.Diagnostics.Debug.WriteLine(e.ExceptionObject);
+    })
+    .UseReactorThemeFonts() //<-- add this line    
+```
 
 # Components
 
