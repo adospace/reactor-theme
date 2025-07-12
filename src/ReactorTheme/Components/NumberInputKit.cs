@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-partial class NumberInputKit : Component
+public partial class NumberInputKit : Component
 {
     [Prop]
     string? _title;

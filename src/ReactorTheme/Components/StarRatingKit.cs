@@ -1,6 +1,6 @@
 ﻿namespace ReactorTheme.DemoApp.Components;
 
-partial class StarRatingKit : Component
+public partial class StarRatingKit : Component
 {
     [Prop]
     string? _title;

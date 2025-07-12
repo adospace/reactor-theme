@@ -3,12 +3,12 @@ using MauiReactor.Shapes;
 
 namespace ReactorTheme.DemoApp.Components;
 
-class SliderKitState
+public class SliderKitState
 {
     public double Width { get; set; }
 }
 
-partial class SliderKit : Component<SliderKitState>
+public partial class SliderKit : Component<SliderKitState>
 {
     [Prop]
     string? _title;

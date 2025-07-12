@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
-enum RadioButtonSize
+public enum RadioButtonSize
 {
     Small,
 
@@ -17,7 +17,7 @@ enum RadioButtonSize
     Large
 }
 
-partial class RadioButtonKit : Component
+public partial class RadioButtonKit : Component
 {
     [Prop]
     RadioButtonSize _size = RadioButtonSize.Normal;

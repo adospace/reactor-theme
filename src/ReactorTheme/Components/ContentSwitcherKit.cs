@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-record TabItem(string Key, string Title);
+public record ContentSwitcherItem(string Key, string Title);
 
-class TabKitState
+public class ContentSwitcherKitState
 {
-    public Dictionary<string, double> ColumnWidths = [];
+    public double? Width { get; set; }
 }
 
-partial class TabKit : Component<TabKitState>
+public partial class ContentSwitcherKit : Component<ContentSwitcherKitState>
 {
     [Prop]
-    IReadOnlyList<TabItem> _items = [];
+    IReadOnlyList<ContentSwitcherItem> _items = [];
 
     [Prop]
     string? _selectedItemKey;
@@ -28,48 +28,44 @@ partial class TabKit : Component<TabKitState>
     public override VisualNode Render()
     {
         var indexOfSelectedItem = _items.ToList().FindIndex(_ => _.Key == _selectedItemKey);
-        var sizeBeforeSelectedItem = indexOfSelectedItem == -1 ? 0 : _items.Take(indexOfSelectedItem).Sum(_ => State.ColumnWidths.GetValueOrDefault(_.Key));
-        var translationX = _selectedItemKey == null ? 0 :
-            sizeBeforeSelectedItem + State.ColumnWidths.GetValueOrDefault(_items.First(_ => _.Key == _selectedItemKey).Key) / 2 - 12;
+        var translationX = indexOfSelectedItem == -1 || State.Width == null ? 0 : State.Width.Value / _items.Count * indexOfSelectedItem;
 
         return Border(
-
-            Grid("*", string.Join(",", _items.Select(_ => "Auto")),
+            
+            Grid("*", string.Join(",", _items.Select(_=>"*")),
 
                 new[] {
                     Border()
-                        .BackgroundColor(ApplicationTheme.HighlightDarkest)
+                        .BackgroundColor(ApplicationTheme.NeutralLightLightest)
                         .IsVisible(_selectedItemKey != null)
                         .StrokeThickness(0)
-                        .Height(4)
-                        .Width(24)
-                        .VEnd()
-                        .HStart()
-                        .StrokeCornerRadius(2)
+                        .StrokeCornerRadius(12)
+                        .Padding(13.5, 0)
                         .TranslationX(translationX)
                         .WithAnimation(duration: 200, easing: Easing.CubicOut)
                 }
                 .Concat(
-                    _items.Select((item, index) =>
+                    _items.Select((item, index) => 
 
                         Grid(
                             Label(item.Title)
-                                .ThemeKey(item.Key == _selectedItemKey ? ApplicationTheme.H4 : ApplicationTheme.BodyM)
+                                .ThemeKey(ApplicationTheme.H5)
                                 .TextColor(item.Key == _selectedItemKey ? ApplicationTheme.NeutralDarkDarkest : ApplicationTheme.NeutralDarkLight)
                                 .VerticalTextAlignment(TextAlignment.Center)
                                 .HorizontalTextAlignment(TextAlignment.Center)
                         )
                         .Padding(13.5, 0)
                         .GridColumn(index)
-                        .OnSizeChanged(size => SetState(s => s.ColumnWidths[item.Key] = size.Width))
                         .OnTapped(() => _onSelectedItem?.Invoke(item.Key))
                     )
                     .Cast<VisualNode>()
                 )
-            )
+            )        
+            .OnSizeChanged(size => SetState(s => s.Width = size.Width))
         )
-        .StrokeThickness(0)
-        .Height(75)
-        .Padding(16);
+        .Height(40)
+        .Padding(4)
+        .StrokeCornerRadius(16)
+        .BackgroundColor(ApplicationTheme.NeutralLightLight);
     }
 }

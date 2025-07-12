@@ -14,12 +14,12 @@ public enum CalendarView
     Strip
 }
 
-class CalendarKitState
+public class CalendarKitState
 {
     public DateTime DisplayDate { get; set; } = DateTime.Today;
 }
 
-partial class CalendarKit : Component<CalendarKitState>
+public partial class CalendarKit : Component<CalendarKitState>
 {
     [Prop]
     DateTime _selectedDate = DateTime.Today;

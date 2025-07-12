@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-enum CheckBoxSize
+public enum CheckBoxSize
 {
     Small,
 
@@ -18,7 +18,7 @@ enum CheckBoxSize
     Large
 }
 
-partial class CheckBoxKit : Component
+public partial class CheckBoxKit : Component
 {
     [Prop]
     CheckBoxSize _size = CheckBoxSize.Normal;

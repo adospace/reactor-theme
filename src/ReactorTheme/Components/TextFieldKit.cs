@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-partial class TextAreaKit : Component
+public partial class TextFieldKit : Component
 {
     [Prop]
     string? _title;
@@ -32,10 +32,6 @@ partial class TextAreaKit : Component
 
     [Prop]
     Action<string>? _onTextChanged;
-
-    [Prop]
-    EditorAutoSizeOption _autosize = EditorAutoSizeOption.TextChanges;
-
     [Prop]
     string? _hintText;
 
@@ -47,10 +43,10 @@ partial class TextAreaKit : Component
                 .TextColor(_disabled ? ApplicationTheme.NeutralDarkLightest : ApplicationTheme.NeutralDarkDark)
                 .Text(_title ?? string.Empty),
             Border(
-                Editor()
+                Entry()
                     .ThemeKey(ThemeKey)
-                    .AutoSize(_autosize)
                     .Placeholder(_placeholder ?? string.Empty)
+                    .IsPassword(_isPassword)
                     .IsReadOnly(_readOnly)
                     .Text(_text ?? string.Empty)
                     .IsEnabled(!_disabled)
@@ -61,9 +57,10 @@ partial class TextAreaKit : Component
             .Stroke(_inError ? ApplicationTheme.SupportErrorMedium : ApplicationTheme.NeutralLightDarkest)
             .StrokeCornerRadius(12)
             .StrokeThickness(1.5)
-            .Padding(16,2),
+            .Padding(16,2)
+            .Height(48),
 
-            _hintText == null ? null : 
+            _hintText == null ? null :
             Label()
                 .ThemeKey(ApplicationTheme.BodyXS)
                 .TextColor(ApplicationTheme.NeutralDarkLightest)

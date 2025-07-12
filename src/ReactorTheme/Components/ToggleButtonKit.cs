@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-partial class ToggleButtonKit : Component
+public partial class ToggleButtonKit : Component
 {
     [Prop]
     bool _checked;

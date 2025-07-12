@@ -31,8 +31,4 @@
 		<PackageReference Include="Reactor.Maui" Version="3.0.*" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Components\" />
-	</ItemGroup>
-
 </Project>

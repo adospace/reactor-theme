@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ReactorTheme.DemoApp.Components;
 
-record AccorditionItem(string Key, string Title, Func<string, VisualNode> ContentRender);
+public record AccorditionItem(string Key, string Title, Func<string, VisualNode> ContentRender);
 
-class AccorditionKitState
+public class AccorditionKitState
 {
     public Dictionary<string, double> ContentHeights { get; set; } = [];
 
@@ -19,7 +19,7 @@ class AccorditionKitState
 
 
 
-partial class AccorditionKit : Component<AccorditionKitState>
+public partial class AccorditionKit : Component<AccorditionKitState>
 {
     [Prop]
     IReadOnlyList<AccorditionItem> _items = [];

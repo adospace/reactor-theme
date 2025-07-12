@@ -1,6 +1,5 @@
 ﻿using MauiReactor;
 using Microsoft.Maui.Graphics.Text;
-using ReactorTheme.DemoApp.Resources.Styles;
 using ReactorTheme.Styles;
 using System;
 using System.Collections.Generic;
@@ -11,7 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace ReactorTheme.Components;
 
-partial class ButtonKit : Component
+public partial class ButtonKit : Component
 {
     [Prop]
     string? _text;
