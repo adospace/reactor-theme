@@ -32,7 +32,7 @@ class MyAppApplicationTheme : ApplicationTheme
 }
 ```
 
-5) Add ReactorTheme directives to the MauiAppBuilder
+4) Add ReactorTheme directives to the MauiAppBuilder
 
 ```csharp
 builder
@@ -112,7 +112,13 @@ https://github.com/user-attachments/assets/2c1351cd-bcc4-41f5-be0d-5e301ff69b24
 
 # Conclusion
 
+Even if the package already contains the fundamental components, I'm working to pair all the widgets presented in the Figma design, so stay tuned!
 
+I hope you appreciated my contribution to the .NET MAUI July 2025 event: if you like the project, I encourage you to star it.
+
+Adolfo Marinucci
+Full-stack software developer from sunny Italy
+https://github.com/adospace
 
 
 
