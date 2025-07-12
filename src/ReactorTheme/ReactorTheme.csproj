@@ -16,6 +16,20 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+
+		<Version>0.0.1</Version>
+		<Authors>adospace</Authors>
+		<Description>ReactorTheme is a theming library for MauiReactor.</Description>
+		<Copyright>Adolfo Marinucci</Copyright>
+		<PackageProjectUrl>https://github.com/adospace/reactor-theme</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/adospace/reactor-theme</RepositoryUrl>
+		<PackageTags>maui mvu components reactjs flutter</PackageTags>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageId>ReactorTheme</PackageId>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+
 	</PropertyGroup>
 
 	<ItemGroup>
