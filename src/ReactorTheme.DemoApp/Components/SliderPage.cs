@@ -28,7 +28,7 @@ partial class SliderPage : BaseKitPage
             VStack(spacing: 24,
                 Render<int>(state =>
                     new SliderKit()
-                        .Label("Slider")
+                        .Title("Title")
                         .Value(state.Value)
                         .OnValueChanged(value => state.Set(_ => value))
                         .MinValue(0)
@@ -37,35 +37,35 @@ partial class SliderPage : BaseKitPage
                 ),
 
                 new SliderKit()
-                    .Label("Slider")
+                    .Title("Title")
                     .Value(0)
                     .MinValue(0)
                     .MaxValue(100)
                     .Step(1),
 
                 new SliderKit()
-                    .Label("Slider")
+                    .Title("Title")
                     .Value(25)
                     .MinValue(0)
                     .MaxValue(100)
                     .Step(1),
 
                 new SliderKit()
-                    .Label("Slider")
+                    .Title("Title")
                     .Value(50)
                     .MinValue(0)
                     .MaxValue(100)
                     .Step(1),
 
                 new SliderKit()
-                    .Label("Slider")
+                    .Title("Title")
                     .Value(75)
                     .MinValue(0)
                     .MaxValue(100)
                     .Step(1),
 
                 new SliderKit()
-                    .Label("Slider")
+                    .Title("Title")
                     .Value(100)
                     .MinValue(0)
                     .MaxValue(100)

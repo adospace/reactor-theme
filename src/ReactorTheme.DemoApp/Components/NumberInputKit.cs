@@ -10,7 +10,7 @@ namespace ReactorTheme.DemoApp.Components;
 partial class NumberInputKit : Component
 {
     [Prop]
-    string? _label;
+    string? _title;
 
     [Prop]
     int _value;
@@ -31,7 +31,7 @@ partial class NumberInputKit : Component
             Label()
                 .ThemeKey(ApplicationTheme.H5)
                 .TextColor(ApplicationTheme.NeutralDarkDark)
-                .Text(_label ?? string.Empty),
+                .Text(_title ?? string.Empty),
 
             Ellipse()
                 .Width(24)

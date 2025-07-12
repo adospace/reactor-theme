@@ -38,6 +38,8 @@ abstract partial class BaseKitPage : BasePage
                 RenderSectionTitle(3, "PROPERTIES"),
 
                 Image(PropertiesImageSource)
+                    .MaximumWidthRequest(300)
+                    .Aspect(Aspect.AspectFit)
             )
         )
         .Padding(45, 70)

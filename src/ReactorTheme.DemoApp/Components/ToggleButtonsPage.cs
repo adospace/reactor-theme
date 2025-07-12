@@ -27,6 +27,10 @@ partial class ToggleButtonsPage : BaseKitPage
         return VStack(
             HScrollView(
                 
+                Render<bool>(state =>
+                    new ToggleButtonKit()
+                        .Checked(state.Value)
+                        .OnChecked(v => state.Set(_=>v)))
             )
         );
     }

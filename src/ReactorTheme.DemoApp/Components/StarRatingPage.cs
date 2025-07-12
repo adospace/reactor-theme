@@ -28,7 +28,7 @@ partial class StarRatingPage : BaseKitPage
             VStack(spacing: 24,
                 Render(state =>
                     new StarRatingKit()
-                        .Label("Star Rating")
+                        .Title("Star Rating")
                         .Value(state.Value)
                         .OnValueChanged(value => state.Set(_ => value))
                         .MaxValue(5)

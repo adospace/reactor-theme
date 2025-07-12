@@ -39,8 +39,11 @@ partial class CheckboxesPage : BaseKitPage
 
 
             HStack(spacing: 12,
-                new CheckBoxKit()
-                    .Size(CheckBoxSize.Normal),
+                Render<bool>(state => 
+                    new CheckBoxKit()
+                        .Size(CheckBoxSize.Normal)
+                        .Checked(state.Value)
+                        .OnChecked(checkedValue => state.Set(_ => checkedValue))),
 
                 new CheckBoxKit()
                     .Size(CheckBoxSize.Normal)

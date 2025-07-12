@@ -29,22 +29,22 @@ partial class TextAreasPage : BaseKitPage
 
             VStack(spacing: 24,
                 new TextAreaKit()
-                    .Label("Title")
+                    .Title("Title")
                     .Placeholder("Placeholder"),
 
                 new TextAreaKit()
-                    .Label("Label")
+                    .Title("Label")
                     .Placeholder("Placeholder")
                     .Text("Text Field")
                     .OnTextChanged(text => Console.WriteLine($"Text changed: {text}")),
 
                 new TextAreaKit()
                     .InError(true)
-                    .Label("Title")
+                    .Title("Title")
                     .Placeholder("Placeholder"),
 
                 new TextAreaKit()
-                    .Label("Disabled")
+                    .Title("Disabled")
                     .Placeholder("Placeholder")
                     .Text("Disabled Text Field")
                     .Disabled(true)

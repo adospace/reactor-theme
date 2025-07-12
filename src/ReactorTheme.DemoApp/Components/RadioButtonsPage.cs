@@ -38,8 +38,12 @@ partial class RadioButtonsPage : BaseKitPage
 
 
             HStack(spacing: 12,
-                new RadioButtonKit()
-                    .Size(RadioButtonSize.Normal),
+                Render<bool>(state =>
+                    new RadioButtonKit()
+                        .Size(RadioButtonSize.Normal)
+                        .Checked(state.Value)
+                        .OnChecked(checkedValue => state.Set(_ => checkedValue))
+                ),
 
                 new RadioButtonKit()
                     .Size(RadioButtonSize.Normal)

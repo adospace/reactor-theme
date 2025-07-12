@@ -44,6 +44,7 @@ partial class CheckBoxKit : Component
                 .When(_size == CheckBoxSize.Large, _ => _.Height(14).Width(14))
                 .Center()
         )
+        .OnTapped(() => _onChecked?.Invoke(!_checked))
         .BackgroundColor(_checked ? ApplicationTheme.HighlightDarkest : ApplicationTheme.NeutralLightLightest)
         .Stroke(ApplicationTheme.NeutralLightDarkest)
         .StrokeThickness(_checked ? 0 : 1)

@@ -11,10 +11,10 @@ class SliderKitState
 partial class SliderKit : Component<SliderKitState>
 {
     [Prop]
-    string? _label;
+    string? _title;
 
     [Prop]
-    int? _value;
+    int _value;
 
     [Prop]
     Action<int>? _onValueChanged;
@@ -33,35 +33,61 @@ partial class SliderKit : Component<SliderKitState>
 
     public override VisualNode Render()
     {
-        return Grid(
+        return Grid("Auto,*","*,Auto",
 
-            Border()
-                .BackgroundColor(ApplicationTheme.NeutralLightMedium)
-                .StrokeCornerRadius(8)
-                .Height(8)
-                .Margin(4, 0)
-                .OnSizeChanged(size => SetState(s => s.Width = size.Width))
-                .OnPointerPressed(OnSetThumbPosition),
+            Label(_title ?? string.Empty)
+                .ThemeKey(ApplicationTheme.H5),
 
-            //Border()
-            //    .BackgroundColor(ApplicationTheme.HighlightDarkest)
-            //    .StrokeCornerRadius(8)
-            //    .HStart()
-            //    .Height(8)
-            //    .Margin(4, 0)
-            //    .Width((State.Width) * (_value.HasValue ? (_value.Value - _minValue) / (double)(_maxValue - _minValue) : 0)),
+            Grid(
 
-            Ellipse()
-                .Height(20)
-                .Width(20)
-                .StrokeThickness(10)
-                .Stroke(ApplicationTheme.NeutralLightLightest)
-                .Fill(ApplicationTheme.HighlightDarkest)
-                .Shadow(Shadow().Brush(new SolidColorBrush(ApplicationTheme.NeutralLightDark)).Radius(4).Offset(0, 2))
-                .Margin(10,4)
-                .HStart()
-                .TranslationX((State.Width - 20) * (_value.HasValue ? (_value.Value - _minValue) / (double)(_maxValue - _minValue) : 0))
-        );
+                Border()
+                    .BackgroundColor(ApplicationTheme.NeutralLightMedium)
+                    .StrokeCornerRadius(8)
+                    .Height(8)
+                    .Margin(6, 0)
+                    .OnSizeChanged(size => SetState(s => s.Width = size.Width))
+                    .OnPointerPressed(OnSetThumbPosition),
+
+                Border()
+                    .BackgroundColor(ApplicationTheme.HighlightDarkest)
+                    .StrokeCornerRadius(8)
+                    .HStart()
+                    .Height(8)
+                    .Margin(6, 0)
+                    .Width((State.Width) * ((_value - _minValue) / (double)(_maxValue - _minValue))),
+
+                Ellipse()
+                    .Height(20)
+                    .Width(20)
+                    .StrokeThickness(10)
+                    .Stroke(ApplicationTheme.NeutralLightLightest)
+                    .Fill(ApplicationTheme.HighlightDarkest)
+                    .Shadow(Shadow().Brush(new SolidColorBrush(ApplicationTheme.NeutralLightDark)).Radius(4).Offset(0, 2))
+                    .Margin(4,4)
+                    .HStart()
+                    .TranslationX((State.Width - 8) * ((_value - _minValue) / (double)(_maxValue - _minValue)))
+            )
+            .GridRow(1),
+
+
+            !_showValue ? null :
+
+            Border(
+
+                Label(((_value - _minValue) / (double)(_maxValue - _minValue)).ToString("p0"))
+                    .ThemeKey(ApplicationTheme.BodyS)
+                    .VerticalTextAlignment(TextAlignment.Center)
+                    .HorizontalTextAlignment(TextAlignment.Center)
+
+            )
+            .Width(56)
+            .BackgroundColor(ApplicationTheme.NeutralLightLight)
+            .StrokeCornerRadius(12)
+            .GridColumn(1)
+            .GridRowSpan(2)            
+        )
+        .RowSpacing(4)
+        .ColumnSpacing(8);
     }
 
     void OnSetThumbPosition(Point? point)

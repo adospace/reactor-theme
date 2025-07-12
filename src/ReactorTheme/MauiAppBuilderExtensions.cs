@@ -22,6 +22,13 @@ public static class MauiAppBuilderExtensions
                 Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
 #endif
         });
+        Microsoft.Maui.Handlers.EditorHandler.Mapper.AppendToMapping("NoUnderline", (h, v) =>
+        {
+#if ANDROID
+            h.PlatformView.BackgroundTintList =
+                Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+#endif
+        });
 
         return mauiAppBuilder
                 .ConfigureFonts(fonts =>

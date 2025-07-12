@@ -10,7 +10,7 @@ namespace ReactorTheme.DemoApp.Components;
 partial class TextAreaKit : Component
 {
     [Prop]
-    string? _label;
+    string? _title;
 
     [Prop]
     string? _placeholder;
@@ -45,7 +45,7 @@ partial class TextAreaKit : Component
             Label()
                 .ThemeKey(ApplicationTheme.H5)
                 .TextColor(_disabled ? ApplicationTheme.NeutralDarkLightest : ApplicationTheme.NeutralDarkDark)
-                .Text(_label ?? string.Empty),
+                .Text(_title ?? string.Empty),
             Border(
                 Editor()
                     .ThemeKey(ThemeKey)

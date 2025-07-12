@@ -26,14 +26,14 @@ partial class NumberInputPage : BaseKitPage
             VStack(spacing: 24,
                 Render<int>(state =>
                     new NumberInputKit()
-                        .Label("Number Input")
+                        .Title("Number Input")
                         .Value(state.Value)
                         .OnValueChanged(value => state.Set(_ => value))
                         ),
 
                 Render<int>(state =>
                     new NumberInputKit()
-                        .Label("Number Input")
+                        .Title("Number Input")
                         .Value(state.Value)
                         .OnValueChanged(value => state.Set(_ => value))
                         .MinValue(0)
