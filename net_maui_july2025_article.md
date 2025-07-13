@@ -115,50 +115,193 @@ https://github.com/user-attachments/assets/4c5f8b62-bcf7-4010-91b2-5d12baa60b95
 
 ## Accordition
 
+*An accordion allows the user to show and hide content sections.*
+
+Sample code:
+
+```csharp
+new AccorditionKit()
+    .Items([
+        new AccorditionItem("item1", "Title 1", _ => 
+            Label($"Content of item 1")
+                .ThemeKey(ApplicationTheme.BodyS)
+                .TextColor(ApplicationTheme.NeutralDarkLight)),
+        new AccorditionItem("item2", "Title 2", _ => 
+            Label($"Content of item 2")
+                .ThemeKey(ApplicationTheme.BodyS)
+                .TextColor(ApplicationTheme.NeutralDarkLight)),
+        new AccorditionItem("item3", "Title 3", _ => 
+            Label($"Content of item 3")
+                .ThemeKey(ApplicationTheme.BodyS)
+                .TextColor(ApplicationTheme.NeutralDarkLight)),
+        ])
+    .SelectedKey(state.Value)
+    .OnSelected(key => state.Set(s => s == key ? null : key))
+)
+```
+
 https://github.com/user-attachments/assets/c4909f43-67a0-4a60-a3a6-b65d5f5d395b
 
 ## Button
+*Buttons communicate actions users can perform by tapping them. They are typically placed where the user can take any action throughout your UI – such as in Dialogs, Forms, Banners, Cards, etc.*
+
+Sample code:
+
+```csharp
+new ButtonKit()
+    .ThemeKey(ApplicationTheme.Primary)
+    .Text("Button")
+    .LeftImageSource("image_left.png")
+    .RightImageSource("image_right.png")
+```
 
 https://github.com/user-attachments/assets/315b1706-4f75-4686-838c-dff19a812235
 
 ## Checkbox
+*A checkbox allows the user to select a value from a small set of options. It should be used when multiple options can be selected.*
+
+```csharp
+new CheckBoxKit()
+    .Size(CheckBoxSize.Normal)
+    .Checked(state.Value)
+    .OnChecked(checkedValue => ...))
+```
 
 https://github.com/user-attachments/assets/90c8a311-9905-4e15-9e15-c6156c1c9cc7
 
 ## Content Switcher
 
+*Content switchers allow users to switch between two or more sections. The content switcher must be placed above the content that will be affected by it.*
+
+```csharp
+new ContentSwitcherKit()
+    .SelectedItemKey(selectedItemKey.Value)
+    .OnSelectedItem(key => ...)
+    .Items(
+    [
+        new ContentSwitcherItem("Section1", "Section 1"),
+        new ContentSwitcherItem("Section2", "Section 2"),
+        new ContentSwitcherItem("Section3", "Section 3")
+    ])
+```
+
 https://github.com/user-attachments/assets/8b7565e0-ed3d-45b2-9d7c-eebd9a100bbe
 
 ## Number Input
+
+*The Number Input is used to enter numerical values and includes controls for increasing or decreasing the value.*
+
+```csharp
+new NumberInputKit()
+    .Title("Number Input")
+    .Value(State.Value)
+    .OnValueChanged(value => ...)
+    .MinValue(0)
+    .MaxValue(10)
+```
 
 https://github.com/user-attachments/assets/d16258a9-0a61-4f3c-a409-680adf6d28b7
 
 ## Radio Button
 
+*A radio button allows the user to select a value from a small set of options. It should be used when only one option can be selected.*
+
+```csharp
+new RadioButtonKit()
+    .Size(RadioButtonSize.Normal)
+    .Checked(state.Value)
+    .OnChecked(checkedValue => ...)
+```
+
 https://github.com/user-attachments/assets/87c961f3-955c-4c37-8108-8aad27217381
 
 ## Slider
+
+*Sliders allow users to enter values from a range. Avoid sliders when the range is too large.*
+
+```csharp
+new SliderKit()
+    .Title("Title")
+    .Value(state.Value)
+    .OnValueChanged(value => ...)
+    .MinValue(0)
+    .MaxValue(100)
+    .Step(1)
+```
 
 https://github.com/user-attachments/assets/ef67efb4-0a1c-4250-adab-023621bef1a3
 
 ## Star Rating
 
+*Star Rating is a component that allows users to give a rating of 0 to 5 on a certain topic. It is often used to measure the preference level of the user regarding some content.*
+
+```csharp
+new StarRatingKit()
+    .Title("Star Rating")
+    .Value(state.Value)
+    .OnValueChanged(value => ...)
+    .MaxValue(5)
+```
+
 https://github.com/user-attachments/assets/82ea1c11-50db-4c63-b3fd-e0aca7eda02e
 
 ## Tab
+
+*Tabs are used to organise related content by categories. They allow the user to navigate between groups of content within the same context.*
+
+```csharp
+new TabKit()
+    .SelectedItemKey(selectedItemKey.Value)
+    .OnSelectedItem(key => ...)
+    .Items(
+    [
+        new TabItem("Tab1", "Title"),
+        new TabItem("Tab2", "Title"),
+        new TabItem("Tab3", "Title"),
+        new TabItem("Tab4", "Title"),
+        new TabItem("Tab5", "Title")
+    ])
+```
 
 https://github.com/user-attachments/assets/183ee7df-dc87-4c8e-be35-6ef231f055ce
 
 ## Text Area
 
+*Text Area is a component that allows the user to enter long text. For short inputs, it is recommended to use the Text Field.*
+
+```csharp
+new TextAreaKit()
+    .Title("Label")
+    .Placeholder("Placeholder")
+    .Text("Text Field")
+    .OnTextChanged(text => ...)
+```
+
 https://github.com/user-attachments/assets/15b28996-4594-4e71-a2d8-2041e9b9e020
 
 ## Text Field
+
+*Text Field is a component that allows the user to enter text. For long inputs, it is recommended to use the Text Area.*
+
+```csharp
+new TextFieldKit()
+    .Title("Label")
+    .Placeholder("Placeholder")
+    .Text("Text Field")
+    .OnTextChanged(text => ...)
+```
 
 https://github.com/user-attachments/assets/d33dd509-f13a-40df-b547-bed87438d499
 
 ## Toggle
 
+*A toggle allows the user to select one of two options. The toggle must be used when the user can turn something on or off.*
+
+```csharp
+new ToggleButtonKit()
+    .Checked(state.Value)
+    .OnChecked(v => ...))
+```
 https://github.com/user-attachments/assets/2c1351cd-bcc4-41f5-be0d-5e301ff69b24
 
 
