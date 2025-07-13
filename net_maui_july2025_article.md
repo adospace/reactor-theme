@@ -61,6 +61,33 @@ The kit includes many components, ranging from the basic Entry to the Tab or Cal
 The theme is based on a simple and elegant palette of a few colors. You can reach any color referencing the ApplicationTheme class.
 For example, `ApplicationTheme.HighlightDarkest` returns the first highlight color.
 
+| Property | Hex | Preview |
+|---|---|---|
+| `ApplicationTheme.HighlightDark` | #2897FF | $$\color{rgb(40,151,255)}{\textsf{■}}$$ |
+| `ApplicationTheme.HighlightDarkest` | #006FFD | $$\color{rgb(0,111,253)}{\textsf{■}}$$ |
+| `ApplicationTheme.HighlightLight` | #B4DBFF | $$\color{rgb(180,219,255)}{\textsf{■}}$$ |
+| `ApplicationTheme.HighlightLightest` | #EAF2FF | $$\color{rgb(234,242,255)}{\textsf{■}}$$ |
+| `ApplicationTheme.HighlightMedium` | #6FBAFF | $$\color{rgb(111,186,255)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralDarkDark` | #2F3036 | $$\color{rgb(47,48,54)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralDarkDarkest` | #1F2024 | $$\color{rgb(31,32,36)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralDarkLight` | #71727A | $$\color{rgb(113,114,122)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralDarkLightest` | #8F9098 | $$\color{rgb(143,144,152)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralDarkMedium` | #494A50 | $$\color{rgb(73,74,80)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralLightDark` | #D4D6DD | $$\color{rgb(212,214,221)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralLightDarkest` | #C5C6CC | $$\color{rgb(197,198,204)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralLightLight` | #F8F9FE | $$\color{rgb(248,249,254)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralLightLightest` | #FFFFFF | $$\color{rgb(255,255,255)}{\textsf{■}}$$ |
+| `ApplicationTheme.NeutralLightMedium` | #E8E9F1 | $$\color{rgb(232,233,241)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportErrorDark` | #ED3241 | $$\color{rgb(237,50,65)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportErrorLight` | #FFE2E5 | $$\color{rgb(255,226,229)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportErrorMedium` | #FF616D | $$\color{rgb(255,97,109)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportSuccessDark` | #298267 | $$\color{rgb(41,130,103)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportSuccessLight` | #E7F4E8 | $$\color{rgb(231,244,232)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportSuccessMedium` | #3AC0A0 | $$\color{rgb(58,192,160)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportWarningDark` | #E86339 | $$\color{rgb(232,99,57)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportWarningLight` | #FFF4E4 | $$\color{rgb(255,244,228)}{\textsf{■}}$$ |
+| `ApplicationTheme.SupportWarningMedium` | #FFB37C | $$\color{rgb(255,179,124)}{\textsf{■}}$$ |
+
 https://github.com/user-attachments/assets/91a69b60-5137-4acd-8e82-9aac6cca42fa
 
 ## Text
@@ -303,6 +330,10 @@ new ToggleButtonKit()
     .OnChecked(v => ...))
 ```
 https://github.com/user-attachments/assets/2c1351cd-bcc4-41f5-be0d-5e301ff69b24
+
+## Demo application
+
+If you want to experiment with the kit, without creating a new application, clone the repository at https://github.com/adospace/reactor-theme, build, and run the demo application. 
 
 
 # Conclusion
