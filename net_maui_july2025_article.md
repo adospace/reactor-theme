@@ -67,12 +67,12 @@ https://github.com/user-attachments/assets/91a69b60-5137-4acd-8e82-9aac6cca42fa
 
 Typography in ReactorTheme is composed of a total of 14 sizes based on 5 flavors of the Inter font:
 
-```csharp
-fonts.AddFont("Inter-Regular.ttf", "InterRegular");
-fonts.AddFont("Inter-Bold.ttf", "InterBold");
-fonts.AddFont("Inter-SemiBold.ttf", "InterSemiBold");
-fonts.AddFont("Inter-ExtraBold.ttf", "InterExtraBold");
-fonts.AddFont("Inter-Medium.ttf", "InterMedium");
+```
+ApplicationTheme.InterRegular
+ApplicationTheme.InterBold
+ApplicationTheme.InterSemiBold
+ApplicationTheme.InterExtraBold
+ApplicationTheme.InterMedium
 ```
 
 Use the `Label.ThemeKey` property to select the size you need:
@@ -81,6 +81,14 @@ Use the `Label.ThemeKey` property to select the size you need:
 Label("Aa")
     .ThemeKey(ApplicationTheme.H1)
     .TextColor(ApplicationTheme.NeutralDarkLight)
+```
+
+or directly reference the font if you want a custom definition:
+
+```csharp
+Label("Aa")
+    .FontFamily(ApplicationTheme.InterRegular)
+    .FontSize(ApplicationTheme.BodyXL)
 ```
 
 https://github.com/user-attachments/assets/4c5f8b62-bcf7-4010-91b2-5d12baa60b95
