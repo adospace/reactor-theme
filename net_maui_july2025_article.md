@@ -20,6 +20,10 @@ The theme follows the excellent Figma design [Mobile Apps – Prototyping Kit](h
 
 2) Install the ReactorTheme package
 
+```
+dotnet add package ReactorTheme --version 1.0.0
+```
+
 3) Replace the initial ApplicationTheme under Resources/Styles with an empty class deriving from ReactorTheme ApplicationTheme
 
 ```csharp
@@ -116,9 +120,10 @@ Even if the package already contains the fundamental components, I'm working to 
 
 I hope you appreciated my contribution to the .NET MAUI July 2025 event: if you like the project, I encourage you to star it.
 
-Adolfo Marinucci
-Full-stack software developer from sunny Italy
-https://github.com/adospace
+Adolfo Marinucci  
+Full-stack software developer from sunny Italy  
+https://github.com/adospace  
+
 
 
 
