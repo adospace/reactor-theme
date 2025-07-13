@@ -79,87 +79,95 @@ public class ApplicationTheme : Theme
     public readonly static string CaptionM = nameof(CaptionM);
 
 
+    public readonly static string InterRegular = nameof(InterRegular);
+    public readonly static string InterBold = nameof(InterBold);
+    public readonly static string InterSemiBold = nameof(InterSemiBold);
+    public readonly static string InterExtraBold = nameof(InterExtraBold);
+    public readonly static string InterMedium = nameof(InterMedium);
+
+
+
     protected override void OnApply()
     {
         LabelStyles.Default = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .TextColor(NeutralDarkDarkest);
 
         LabelStyles.Themes[H1] = _ => _
-            .FontFamily("InterExtraBold")
+            .FontFamily(InterExtraBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading1);
 
         LabelStyles.Themes[H2] = _ => _
-            .FontFamily("InterExtraBold")
+            .FontFamily(InterExtraBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading2);
 
         LabelStyles.Themes[H3] = _ => _
-            .FontFamily("InterExtraBold")
+            .FontFamily(InterExtraBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading3);
 
         LabelStyles.Themes[H4] = _ => _
-            .FontFamily("InterBold")
+            .FontFamily(InterBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading4);
 
         LabelStyles.Themes[H4] = _ => _
-            .FontFamily("InterBold")
+            .FontFamily(InterBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading4);
 
         LabelStyles.Themes[H5] = _ => _
-            .FontFamily("InterBold")
+            .FontFamily(InterBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeHeading5);
 
         LabelStyles.Themes[BodyXL] = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeBodyXL);
 
         LabelStyles.Themes[BodyL] = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .FontSize(SizeBodyL);
 
         LabelStyles.Themes[BodyM] = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeBodyM);
 
         LabelStyles.Themes[BodyS] = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeBodyS);
 
         LabelStyles.Themes[BodyXS] = _ => _
-            .FontFamily("InterMedium")
+            .FontFamily(InterMedium)
             .FontSize(SizeBodyXS);
 
         LabelStyles.Themes[ActionL] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeActionL);
 
         LabelStyles.Themes[ActionM] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeActionM);
 
         LabelStyles.Themes[ActionS] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeActionS);
 
         LabelStyles.Themes[CaptionM] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralDarkDarkest)
             .FontSize(SizeCaptionM);
 
         ButtonStyles.Default = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralLightLightest)
             .BackgroundColor(HighlightDarkest)
             .FontSize(SizeCaptionM)
@@ -168,7 +176,7 @@ public class ApplicationTheme : Theme
             .Height(40);
 
         ButtonStyles.Themes[Primary] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(NeutralLightLightest)
             .BackgroundColor(HighlightDarkest)
             .FontSize(SizeCaptionM)
@@ -177,7 +185,7 @@ public class ApplicationTheme : Theme
             .Height(40);
 
         ButtonStyles.Themes[Secondary] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(HighlightDarkest)
             .BackgroundColor(NeutralLightLightest)
             .BorderColor(HighlightDarkest)
@@ -188,7 +196,7 @@ public class ApplicationTheme : Theme
             .Height(40);
 
         ButtonStyles.Themes[Terciary] = _ => _
-            .FontFamily("InterSemiBold")
+            .FontFamily(InterSemiBold)
             .TextColor(HighlightDarkest)
             .BackgroundColor(NeutralLightLightest)
             .BorderWidth(0)
@@ -199,7 +207,7 @@ public class ApplicationTheme : Theme
 
 
         EntryStyles.Default = _ => _
-            .FontFamily("InterRegular")
+            .FontFamily(InterRegular)
             .TextColor(NeutralDarkDarkest)
             .BackgroundColor(NeutralLightLightest)
             .FontSize(SizeBodyM)
