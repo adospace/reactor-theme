@@ -4,6 +4,44 @@ ReactorTheme is a prototyping kit for MauiReactor, providing several prebuilt co
 
 [Figma design](https://www.figma.com/community/file/1129468881607079432)
 
+[![Nuget](https://img.shields.io/nuget/v/ReactorTheme)](https://www.nuget.org/packages/ReactorTheme) 
+
+*Getting started*
+
+1) Create a new MauiReactor project
+
+2) Install the ReactorTheme package
+
+```
+dotnet add package ReactorTheme --version 1.0.0
+```
+
+3) Replace the initial application theme with an empty class deriving from the package application theme
+
+```csharp
+class MyAppApplicationTheme : ApplicationTheme
+{
+    protected override void OnApply()
+    {
+      //additional styles
+    }
+}
+```
+
+4) Initialize the ReactorTheme package in the MauiAppBuilder
+
+```csharp
+builder
+    .UseMauiReactorApp<ShellPage>(app =>
+    {
+        app.UseTheme<MyAppApplicationTheme>();//<-- use your application theme class deriving from the ReactorTheme application theme
+    },
+    unhandledExceptionAction: e =>
+    {
+        System.Diagnostics.Debug.WriteLine(e.ExceptionObject);
+    })
+    .UseReactorThemeFonts() //<-- add this line
+```
 
 ## Color
 
