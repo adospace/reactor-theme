@@ -68,6 +68,26 @@ https://github.com/user-attachments/assets/91a69b60-5137-4acd-8e82-9aac6cca42fa
 Typography in ReactorTheme is composed of a total of 14 sizes based on 5 flavors of the Inter font:
 
 ```
+//font sizes
+ApplicationTheme.SizeHeading1
+ApplicationTheme.SizeHeading2
+ApplicationTheme.SizeHeading3
+ApplicationTheme.SizeHeading4
+ApplicationTheme.SizeHeading5
+
+ApplicationTheme.SizeBodyXL
+ApplicationTheme.SizeBodyL
+ApplicationTheme.SizeBodyM
+ApplicationTheme.SizeBodyS
+ApplicationTheme.SizeBodyXS
+
+ApplicationTheme.SizeActionL
+ApplicationTheme.SizeActionM
+ApplicationTheme.SizeActionS
+
+ApplicationTheme.SizeCaptionM
+
+//font families
 ApplicationTheme.InterRegular
 ApplicationTheme.InterBold
 ApplicationTheme.InterSemiBold
@@ -88,7 +108,7 @@ or directly reference the font if you want a custom definition:
 ```csharp
 Label("Aa")
     .FontFamily(ApplicationTheme.InterRegular)
-    .FontSize(ApplicationTheme.BodyXL)
+    .FontSize(ApplicationTheme.SizeBodyXL)
 ```
 
 https://github.com/user-attachments/assets/4c5f8b62-bcf7-4010-91b2-5d12baa60b95
