@@ -100,4 +100,8 @@ https://github.com/user-attachments/assets/d33dd509-f13a-40df-b547-bed87438d499
 
 https://github.com/user-attachments/assets/2c1351cd-bcc4-41f5-be0d-5e301ff69b24
 
+## More info
 
+Please take a look at the introductory article I wrote for the .NET MAUI July 2025 event:
+
+https://github.com/adospace/reactor-theme/blob/main/net_maui_july2025_article.md
