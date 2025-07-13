@@ -58,10 +58,15 @@ The kit includes many components, ranging from the basic Entry to the Tab or Cal
 
 ## Color
 
+The theme is based on a simple and elegant palette of a few colors. You can reach any color referencing the ApplicationTheme class.
+For example, `ApplicationTheme.HighlightDarkest` returns the first highlight color.
+
 https://github.com/user-attachments/assets/91a69b60-5137-4acd-8e82-9aac6cca42fa
 
 
 ## Text
+
+Typography in ReactorTheme is composed 
 
 https://github.com/user-attachments/assets/4c5f8b62-bcf7-4010-91b2-5d12baa60b95
 
